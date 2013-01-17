@@ -1,0 +1,4 @@
+<launch>
+	<node name="arduros_firmata_bridge" pkg="arduros" type="arduros" args="-p /dev/ttyUSB0 -s 19200" output="screen" launch-prefix="xterm -e gdb --args"/>
+	<node name="arduros_test_harness" pkg="arduros" type="arduros_listener" output="screen" />
+</launch>
